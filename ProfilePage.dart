@@ -73,7 +73,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
                 // menu and notification icons  
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   
                   IconButton(
@@ -95,34 +95,25 @@ class _ProfilePageState extends State<ProfilePage> {
                 ],
               ),
                 
-                  Spacer(),
+                  
                 //add profile picture
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Container(
-                    //this part doesnt work
-                    width: 50,
-                    height: 50,
+                    width: 120,
+                    height: 120,
                     decoration:  BoxDecoration(
                         shape: BoxShape.circle,
                         image:  DecorationImage(
                             fit: BoxFit.cover,
-                            image: NetworkImage("https://www.woolha.com/media/2019/06/buneary.jpg")
+                            image: AssetImage("assets/images/harry.jpg")
                         ),
                     ),
-        
-      
-                      /*decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(url)
-                          )
-                      ),*/
                     ),
                   ],
                   ),
+                  Spacer(),
 
                   //add login text
                   Align(
@@ -148,11 +139,11 @@ class _ProfilePageState extends State<ProfilePage> {
               height: MediaQuery.of(context).size.height/2,
               width: MediaQuery.of(context).size.width,
               padding: EdgeInsets.only(top: 32,left: 20),
-              alignment: Alignment.topLeft,
                 
               child: Column(
-                
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+                  
                 Text("Name",style: _style()),
                 SizedBox(height: 4,),
                 Text("Milan Short"),
@@ -173,7 +164,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Text("English, French"),
                 SizedBox(height: 16,),
 
-                Text("Occupation", style: _style(),),
+                Text("Occupation",  style: _style(),),
                 SizedBox(height: 4,),
                 Text("Employee"),
                 SizedBox(height: 16,),
@@ -183,14 +174,14 @@ class _ProfilePageState extends State<ProfilePage> {
 
           //edit button
           Align(
-              alignment: Alignment.bottomRight,
+              alignment: Alignment.bottomCenter,
               child: GestureDetector(
                 onTap: (){
                   print("//TODO: button clicked");
                 },
                 child: Padding(
                   padding: const EdgeInsets.only(
-                    top: 4,left: 16, right: 16, bottom: 4
+                    top: 80,left: 16, right: 16, bottom: 4
                     ),
                     child: Container(
                       width: 110,

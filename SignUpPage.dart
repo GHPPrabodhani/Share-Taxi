@@ -72,21 +72,31 @@ class _SignUpPageState extends State<SignUpPage> {
                 Spacer(),
 
                   //add logo
-                  Align(
-                    alignment: Alignment.center,
-                    child: Icon(Icons.local_taxi,//add image insted of icon
-                      size: 70,
-                      color: Colors.black,
+                  Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                    width: 100,
+                    height: 100,
+                    decoration:  BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        image:  DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage("assets/images/taxiIcon.png")
+                        ),
                     ),
+        
+                      
+                    ),
+                  ],
                   ),
-                  Spacer(),
 
-                  //add login text
+                  //add signup text
                   Align(
                     alignment: Alignment.bottomCenter,
                       child: Padding(
                         padding: const EdgeInsets.only(
-                          bottom: 15
+                          bottom: 15        
                         ),
                         child: Text('SignUp',
                           style: TextStyle(
